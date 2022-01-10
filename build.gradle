@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+jar {
+    archiveName = "JNDIGF.jar"
+    destinationDir = file '/Users/georgemarianmihailescu/Desktop/Master/TJPAD/servers/glassfish5/glassfish/domains/domain1/autodeploy'
+}
+
+
+war {
+    archiveName = "JNDIGF.war"
+    destinationDir = file '/Users/georgemarianmihailescu/Desktop/Master/TJPAD/servers/glassfish5/glassfish/domains/domain1/autodeploy'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly('javax:javaee-web-api:8.0.1')
+}
+
+test {
+    useJUnitPlatform()
+}
